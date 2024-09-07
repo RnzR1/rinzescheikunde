@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheikunde PO VWO 3 Lingecollege Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <h1>Scheikunde PO VWO 3 Lingecollege Calculator</h1>
+        <p>Gemaakt door Rinze</p>
+
+        <div id="calculator">
+            <h2>Voer de gegevens in</h2>
+            <form id="calculatorForm">
+                <div class="input-group">
+                    <label for="trainDistance">Afstand trein (km):</label>
+                    <input type="number" id="trainDistance" name="trainDistance" required>
+                    <label for="trainFactor">Emissiefactor trein (kg CO2/km):</label>
+                    <input type="number" id="trainFactor" name="trainFactor" step="0.001" required>
+                </div>
+                <div class="input-group">
+                    <label for="carDistance">Afstand auto (km):</label>
+                    <input type="number" id="carDistance" name="carDistance" required>
+                    <label for="carFactor">Emissiefactor auto (kg CO2/km):</label>
+                    <input type="number" id="carFactor" name="carFactor" step="0.001" required>
+                </div>
+                <div class="input-group">
+                    <label for="planeDistance">Afstand vliegtuig (km):</label>
+                    <input type="number" id="planeDistance" name="planeDistance" required>
+                    <label for="planeFactor">Emissiefactor vliegtuig (kg CO2/km):</label>
+                    <input type="number" id="planeFactor" name="planeFactor" step="0.001" required>
+                </div>
+                <div class="input-group">
+                    <label for="boatDistance">Afstand boot (km):</label>
+                    <input type="number" id="boatDistance" name="boatDistance" required>
+                    <label for="boatFactor">Emissiefactor boot (kg CO2/km):</label>
+                    <input type="number" id="boatFactor" name="boatFactor" step="0.001" required>
+                </div>
+                <button type="button" id="calculateButton">Bereken</button>
+            </form>
+
+            <div id="results" class="hidden">
+                <h2>Resultaten</h2>
+                <div id="detailedResults"></div>
+                <div id="totalResults"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
